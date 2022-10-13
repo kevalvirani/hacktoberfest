@@ -1,25 +1,34 @@
-def bubbleSort(arr):
-	n = len(arr)
+import java.util.Scanner;
 
-	                                                              # Traverse through all array elements
-	for i in range(n-1):
-	                                                                   # range(n) also work but outer loop will repeat one time more than needed.
-
-		                                                     # Last i elements are already in place
-		for j in range(0, n-i-1):
-
-							# traverse the array from 0 to n-i-1
-							# Swap if the element found is greater
-							# than the next element
-			if arr[j] > arr[j + 1] :
-				arr[j], arr[j + 1] = arr[j + 1], arr[j]
-
-# Driver code to test above
-arr = [64, 34, 25, 12, 22, 11, 90]
-
-bubbleSort(arr)
-
-print ("Sorted array is:")
-for i in range(len(arr)):
-	print ("% d" % arr[i])
-
+class BubbleSortExample {
+  public static void main(String []args) {
+    int num, i, j, temp;
+    Scanner input = new Scanner(System.in);
+ 
+    System.out.println("Enter the number of integers to sort:");
+    num = input.nextInt();
+ 
+    int array[] = new int[num];
+ 
+    System.out.println("Enter " + num + " integers: ");
+ 
+    for (i = 0; i < num; i++) 
+      array[i] = input.nextInt();
+ 
+    for (i = 0; i < ( num - 1 ); i++) {
+      for (j = 0; j < num - i - 1; j++) {
+        if (array[j] > array[j+1]) 
+        {
+           temp = array[j];
+           array[j] = array[j+1];
+           array[j+1] = temp;
+        }
+      }
+    }
+ 
+    System.out.println("Sorted list of integers:");
+ 
+    for (i = 0; i < num; i++) 
+      System.out.println(array[i]);
+  }
+}
