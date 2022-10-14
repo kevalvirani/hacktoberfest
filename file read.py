@@ -1,8 +1,7 @@
-file = open("file.txt", "w")
-#file.write("Hello welcome to Parul university.")
-#file.write(" I'm from Vadodara. ")
-f = input("Enter Details : ")
-file.write(f)
-file.close()
-file = open("file.txt", "r")
-print(file.read())
+f = open("demofile2.txt", "a")
+f.write("Now the file has more content!")
+f.close()
+
+#open and read the file after the appending:
+f = open("demofile2.txt", "r")
+print(f.read())
