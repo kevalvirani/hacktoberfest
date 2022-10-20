@@ -23,10 +23,3 @@ class Manager(Employee,Qualification):
         Qualification.__init__(self,degree,college)
         print('Manager\'s deatils:-')
 
-s1=Scientist('keval',20,'PHD','Oxford University')
-s1.employee_details()
-s1.qualification_details()
-
-m1=Manager('Herry',35,'MBA','Parul university')
-m1.employee_details()
-m1.qualification_details()
